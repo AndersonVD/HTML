@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade IPM</title>
+    <!-- <link rel="icon" href="https://www.ipm.com.br/wp-content/uploads/2021/02/favicon-ipm.png"> -->
+    <link rel="stylesheet" href="atividade04_04.css">
+</head>
+<body>
+    <input type="number" id="campo">
+    <label class="quantidade" for="Quantidade">Quantidade</label>
+    <br>
+    <button class="botao" onclick="gerar_div()">
+        Gerar
+    </button><br>
+    <div class="items" id="items">
+        <!-- <div class="first_div"></div> -->
+    </div>
+</body>
+</html>
+<script>
+    // debugger;
+    function gerar_div() {
+        let numero_input = parseInt(document.getElementById("campo").value);
+        for (let i = 0; i < numero_input; i++) {
+            var nova_div = document.createElement("div");
+            var novo_cont = document.createTextNode(i);
+            nova_div.appendChild(novo_cont)
+            nova_div.setAttribute('class', 'items')  
+            var div_atual = document.getElementById("items");
+            document.body.insertBefore(nova_div, div_atual);
+        }
+    }
+</script>
