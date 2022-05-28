@@ -1,0 +1,13 @@
+.quantidade { 
+    color: red;
+    margin-left: 1%;
+}
+
+.items{
+    margin-top:10px;
+    width:30px;
+    height:30px;
+    background:gold;
+    text-align: center;
+    float: left;
+}

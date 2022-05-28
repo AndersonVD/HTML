@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade IPM</title>
+    <link rel="icon" href="https://www.ipm.com.br/wp-content/uploads/2021/02/favicon-ipm.png">
+</head>
+<body>
+    <div>
+    <input type="text" name="number1" id="number1" placeholder="Insira numero 1">
+    <input type="text" name="number2" id="number2" placeholder="Insira numero 2">
+    </div>
+    <button type="button"
+    style="border-radius: 10px; border-color: rgb(111, 41, 41);"
+    onclick="soma_numero()">
+    Click
+    </button>
+</body>
+</html>
+<script>
+    function soma_numero() {
+        let numero_primeiro = parseInt(document.getElementById('number1').value, 10)
+        let numero_segundo = parseInt(document.getElementById('number2').value, 10)
+        let resultado = numero_primeiro + numero_segundo
+        
+        if (isNaN(resultado)) {
+            alert('Não é um número')
+        }
+        else {
+        alert(resultado)
+        }
+    }
+</script>
